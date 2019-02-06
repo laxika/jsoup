@@ -177,11 +177,11 @@ public final class StringUtil {
     }
 
     public static boolean in(final String needle, final String... haystack) {
-        final int len = haystack.length;
-        for (int i = 0; i < len; i++) {
-            if (haystack[i].equals(needle))
-            return true;
+        for (String s : haystack) {
+            if (s.equals(needle))
+                return true;
         }
+
         return false;
     }
 
